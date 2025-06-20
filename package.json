@@ -1,0 +1,12 @@
+{
+  "name": "flipped-kkq",
+  "version": "1.0.0",
+  "description": "Platform pembelajaran KKQ interaktif.",
+  "private": true,
+  "scripts": {
+    "build": "rm -rf dist && mkdir -p dist && mkdir -p dist/audio && esbuild index.tsx --bundle --outfile=dist/index.js --platform=browser --format=esm --define:process.env.API_KEY=\\\"\"$API_KEY\"\\\" --external:react --external:react-dom/ --external:react/ --external:@google/genai && cp index.html dist/index.html && node scripts/post-build.js && cp metadata.json dist/metadata.json && if [ -d \"audio\" ] && [ \"$(ls -A audio)\" ]; then cp -R audio/* dist/audio/; else echo \"Audio directory is empty or does not exist, skipping copy.\"; fi"
+  },
+  "devDependencies": {
+    "esbuild": "^0.20.2"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "name": "FLIPPED KKQ - LATEST JSON",
+  "description": "Platform pembelajaran Kelas Kemahiran Al-Quran (KKQ) interaktif dengan modul teks, modul auditori, pembantu AI, dan ciri penghantaran rakaman.",
+  "requestFramePermissions": [
+    "microphone"
+  ],
+  "prompt": ""
+}
